@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    if (roman_string is None) or len(roman_string) < 1:
+    if (type(roman_string) != str) or len(roman_string) < 1:
         return 0
     roman = {
         "I" : 1,
@@ -19,7 +19,8 @@ def roman_to_int(roman_string):
             return 0
         num = roman[char]
         if prev < num:
-            number = num - prev
+            number -= prev
+            number += num - prev
         else:
             number += num
         prev = num
