@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
+    if (roman_string is None) or len(roman_string) < 1:
+        return 0
     roman = {
         "I" : 1,
         "V" : 5,
@@ -14,7 +16,7 @@ def roman_to_int(roman_string):
     prev = 10000
     for char in roman_string.upper():
         if char not in roman:
-            return None
+            return 0
         num = roman[char]
         if prev < num:
             number = num - prev
