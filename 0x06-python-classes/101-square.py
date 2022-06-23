@@ -77,7 +77,7 @@ class Square:
                 print()
             for i in range(self.__size):
                 if (self.__position[0] != 0):
-                    for l in range(self.__position[0]):
+                    for _ in range(self.__position[0]):
                         print(' ', end='')
                 for j in range(self.__size):
                     print('#', end='')
@@ -93,7 +93,7 @@ class Square:
                 str_square.append('\n')
             for i in range(self.__size):
                 if (self.__position[0] != 0):
-                    for l in range(self.__position[0]):
+                    for _ in range(self.__position[0]):
                         str_square.append(' ')
                 for j in range(self.__size):
                     str_square.append('#')
