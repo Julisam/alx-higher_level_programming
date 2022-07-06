@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-""" module square"""
+
+
+"""inherits from Rectangle (9-rectangle.py).
+(task based on 10-square.py
+
+"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    def __init__(self, size):
-        """ init rectangle """
-        self.integer_validator("size", size)
-        Rectangle.__init__(self, size, size)
-        self.__size = size
+    """Class reps of a rectangle"""
 
-    def __str__(self):
-        """ str version  """
-        return "[Square] {}/{}".format(self.__size, self.__size)
+    def __init__(self, size):
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
